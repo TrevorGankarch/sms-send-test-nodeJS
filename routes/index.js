@@ -5,8 +5,8 @@ const Nexmo = require('nexmo');
 
 //Init nexmo
 const nexmo = new Nexmo({
-    apiKey: 'XXXXX',
-    apiSecret: 'XXXXXcd '
+    apiKey: 'b31cb136',
+    apiSecret: 'zGEy9YqddRUMxCar'
    }, {debug: true});
    
 
@@ -29,6 +29,14 @@ router.post('/', (req,res) => {
         }
         else
         console.dir(responseData);
+        //Get data from response
+        const data = {
+            id: responseData.message[0]['message-id'],
+            number: responseData.message[0]['to']
+        }
+
+        //Emit data to the client
+        io.emit('smsStatus', data);
     });
 
 })

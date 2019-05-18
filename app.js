@@ -35,3 +35,14 @@ app.use(indexRoutes);
 
 //Start server
 const server = app.listen(port, () => console.log(`Server is running on port ${port}`));
+
+//Connect to socket io
+const io = socketio(server);
+
+io.on('connection',(socket) => {
+    console.log('connected');
+    io.on('disconnect',() => {
+    console.log('disconnected');
+   
+    })
+});
