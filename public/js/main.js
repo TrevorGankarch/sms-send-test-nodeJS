@@ -7,7 +7,7 @@ const response = document.querySelector('.response');
 button.addEventListener('click', send, false);
 
 function send(){
-    const number = numberInput.value.replace('/\D/g','');//Regex is to make sure there is no numeric characters
+    const number = numberInput.value.replace('/\D/g','');//Regex is to make sure there is no non-numeric characters
     const text = textInput.value;
 
 fetch('/',{

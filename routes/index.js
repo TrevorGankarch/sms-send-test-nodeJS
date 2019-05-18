@@ -6,7 +6,7 @@ const Nexmo = require('nexmo');
 //Init nexmo
 const nexmo = new Nexmo({
     apiKey: 'XXXXX',
-    apiSecret: 'XXXXX'
+    apiSecret: 'XXXXXcd '
    }, {debug: true});
    
 
