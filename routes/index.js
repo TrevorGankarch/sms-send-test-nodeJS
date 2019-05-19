@@ -5,8 +5,8 @@ const Nexmo = require('nexmo');
 
 //Init nexmo
 const nexmo = new Nexmo({
-    apiKey: 'b31cb136',
-    apiSecret: 'zGEy9YqddRUMxCar'
+    apiKey: 'XXXXXX',
+    apiSecret: 'XXXXXXX'
    }, {debug: true});
    
 
